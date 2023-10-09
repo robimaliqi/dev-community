@@ -19,4 +19,8 @@ class User < ApplicationRecord
     'Cloud Developer',
     'AWS Developer'
   ].freeze
+
+  def name 
+    "#{first_name} #{last_name}".strip
+  end 
 end
