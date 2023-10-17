@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @users = User.limit(8).order(:created_at)
+    @q = User.ransack(params[:q])
+    @users = @q.result.limit(8).order(:created_at)
   end
 end
