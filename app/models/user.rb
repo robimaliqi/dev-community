@@ -22,7 +22,11 @@ class User < ApplicationRecord
 
   def name 
     "#{first_name} #{last_name}".strip
-  end 
+  end
+
+  def address
+    "#{city}, #{county}, #{country}, #{postcode}"
+  end
 
   def self.ransackable_attributes(auth_object = nil)
     ['country', 'city']
