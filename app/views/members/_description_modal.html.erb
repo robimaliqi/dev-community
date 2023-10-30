@@ -1,0 +1,30 @@
+<%= turbo frame tag :remote modal, target: :top do %>
+  <div class="modal" tabindex="-1" role="dialog" data-controller="edit-user-description">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <%= formw_with model: @user, url: "#" do |form| %>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <%= form.label :description, class: 'mb-3' %>
+                  <%= form.text area :about, value: @user.about, class: "form-control", rows:15%>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <%= form.submit 'Save changes', data: { action: 'click->bs-modal#submitEnd' } %>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% end %>
