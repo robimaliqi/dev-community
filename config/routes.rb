@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   root "home#index"
 
   get 'member/:id', to: 'members#show', as: 'member'
-  get 'edit_description/:id', to: 'member#edit_description', as: 'edit_member_description'
+  get 'edit_description/:id', to: 'members#edit_description', as: 'edit_member_description'
 end
