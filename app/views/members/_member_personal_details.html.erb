@@ -1,0 +1,23 @@
+<div class="card mb-5" id="member-personal-details">
+  <div class="row">
+    <div class="col-lg-4">
+      <%= image_tag "user_image.jpg", class: "img-fluid" %>
+    </div>
+    <div class="col-lg-8">
+      <div class="card-body">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h3 class="fw-bold"><%= user.name %></h3>
+
+          <% if user_signed_in? && @user == current_user %>
+            <%= link_to edit_member_personal_details_path, data: { controller: "edit-user-details" } do %>
+              <p>Edit Details</p>
+            <% end %>
+          <% end %>
+        </div>
+
+        <p class="lead"><%= user.profile_title %></p>
+        <p class="lead"><%= user.address %></p>
+      </div>
+    </div>
+  </div>
+</div>
