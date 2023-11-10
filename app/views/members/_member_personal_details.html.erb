@@ -9,7 +9,7 @@
           <h3 class="fw-bold"><%= user.name %></h3>
 
           <% if user_signed_in? && @user == current_user %>
-            <%= link_to edit_member_personal_details_path, data: { controller: "edit-user-details" } do %>
+            <%= link_to edit_member_personal_details_path, data: { controller: "bs-modal-form" } do %>
               <p>Edit Details</p>
             <% end %>
           <% end %>
