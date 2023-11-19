@@ -1,6 +1,6 @@
-class WorkExperiencesController < ApplicstionController
+class WorkExperiencesController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_work_experience, only: %i[edit_update_destroy]
+  before_action :set_work_experience, only: %i[edit update destroy]
 
   def new
     @work_experience = current_user.work_experiences.new
