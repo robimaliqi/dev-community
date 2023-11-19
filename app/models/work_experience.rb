@@ -1,7 +1,7 @@
 class WorkExperience < ApplicationRecord
 
   EMPLOYMENT_TYPE = ['Full-time', 'Part-time', 'Self-employed', 'Freelance', 'Trainee', 'Internship']
-  LOCATION_TYPE = ['Om-site', 'Hybrid', 'Remote' ]
+  LOCATION_TYPE = ['On-site', 'Hybrid', 'Remote' ]
 
   belongs_to :user
 
