@@ -36,4 +36,12 @@ class WorkExperience < ApplicationRecord
       errors.add(:end_date, ' must be greater than start_date')
     end
   end
+
+  def company_with_employment_type
+    "#{company} (#{employment_type})".strip
+  end
+
+  def job_location
+    "#{location} (#{location_type})"
+  end
 end
