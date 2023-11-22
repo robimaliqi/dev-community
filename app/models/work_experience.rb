@@ -47,9 +47,9 @@ class WorkExperience < ApplicationRecord
 
   def job_duration
     months = if end_date.present?
-      ((end_date.year - start_date.year) * 12 + end_date.month - start_date.month - (end_date.day >= start_date.day ? 0 : 1)). round
+      fetch_monts(last_date)
     else 
-      ((Date.today.year - start_date.year) * 12 + end_date.month - start_date.month - (end_date.day >= start_date.day ? 0 : 1)). round
+      fetch_monts(Date.today)
     end
 
   result = months.divmod(12)
@@ -61,5 +61,9 @@ class WorkExperience < ApplicationRecord
     else
       "#{start_date.strftime ("%b %Y")} - #{end_date.strftime ("%b %Y")} (#{duration})"
     end
+  end
+
+  def fetch_monts(last_date)
+    ((last_date.year - start_date.year) * 12 + end_date.month - start_date.month - (end_date.day >= start_date.day ? 0 : 1)). round
   end
 end
