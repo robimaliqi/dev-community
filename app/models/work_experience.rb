@@ -47,7 +47,7 @@ class WorkExperience < ApplicationRecord
 
   def job_duration
     months = if end_date.present?
-      fetch_monts(last_date)
+      fetch_monts(end_date)
     else 
       fetch_monts(Date.today)
     end
