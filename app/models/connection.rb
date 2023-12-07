@@ -6,5 +6,5 @@ class Connection < ApplicationRecord
   belongs_to :received, foreign_key: :user_id, class_name: 'User'
 
   validates :connected_user_id, presence: true
-  validates :status, presence: true, inclusion: { in: %w(pending accepted rejected deleted)}
+  validates :status, presence: true, inclusion: { in: CONNECTION_STATUSES}
 end
