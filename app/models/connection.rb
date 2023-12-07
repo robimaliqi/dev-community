@@ -1,5 +1,5 @@
 class Connection < ApplicationRecord
-  
+  CONNECTION_STATUSES = %w(pending accepted rejected deleted)
   belongs_to :user
 
   belongs_to :requested, foreign_key: :connected_user_id, class_name: 'User'
