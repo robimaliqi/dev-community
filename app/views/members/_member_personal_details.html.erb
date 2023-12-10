@@ -27,11 +27,16 @@
             <% elsif get_connection_status(user) == "accepted" %>
               <button type="button" class="btn btn-success">Connected</button>
             <% elsif get_connection_status(user) == "rejected"%>
-              <button type="button" class="btn btn-danger">Rejected</button>
+              <button type="buvtton" class="btn btn-danger">Rejected</button>
             <% end %>
           <% end %>
         </div>
 
+        <% if @connections.present? %>
+          <div id="connection-count">
+            <%= link_to pluralize(@connections.count, 'connection'), "javascript:void(0)" %>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>
