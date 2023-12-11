@@ -14,6 +14,13 @@
                   <%= link_to member_path(user), style:'text-decoration:none;', target: "_blank" do %>
                     <h4 style="margin-bottom: -2px;"><%= user.name %></h4>
                   <% end %>
+
+                  <% mutual_connection_count = current_user.connected_user_ids.intersection(user.connected_user_ids).count %>
+                  <% mutual_connection_count > 0 %>%
+                    <%= link_to "javascript:void(0)", style:'text-decoration:none;', target: "_blank" do %>
+                      <small class="text-muted"><%= pluralize(mutual_connection_count, 'mutual connection') %></small><br>
+                    <% end %>
+                  <% end %>
                   <small class="text-muted"><%= user.profile_title %></small><br>
                   <small class="text-muted"><%= user.address %></small><br>
                 </div>
