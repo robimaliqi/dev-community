@@ -53,12 +53,11 @@ class WorkExperiencesController < ApplicationController
   end
 
   def destroy
-      @work_experience.destroy
+    @work_experience.destroy
       render_turbo_stream(
         'remove',
         "work_experience_item#{@work_experience.id}"
       )
-    end
   end
 
   private
