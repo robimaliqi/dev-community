@@ -30,6 +30,7 @@ class User < ApplicationRecord
   end
 
   def address
+    return nil if city.blank? && county.blank? && country.blank? && postcode.blank?
     "#{city}, #{county}, #{country}, #{postcode}"
   end
 
