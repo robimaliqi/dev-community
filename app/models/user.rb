@@ -7,6 +7,8 @@ class User < ApplicationRecord
   has_many :work_experiences, dependent: :destroy
   has_many :connections, dependent: :destroy    
 
+  validates :first_name, :last_name, :username, :profile_title, presence: true
+
   PROFILE_TITLE = [
     'Senior Ruby on Rails Developer',
     'Full Stack Ruby on Rails Developer',
