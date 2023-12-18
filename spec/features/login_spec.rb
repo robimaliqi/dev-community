@@ -26,7 +26,6 @@ RSpec.feature "Logins", type: :feature do
       expect(page).to have_text('Search profesionals across the world!')
       expect(page).to have_text(user.name)
       expect(page).to have_text(user.profile_title)
-      debugger
     end
   end
 end
