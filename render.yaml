@@ -1,12 +1,12 @@
 databases:
   - name: postgres
     ipAllowList: []
-    databaseName: dev-community
-    user: dev-community
+    databaseName: dev_community
+    user: dev_community
 
 services:
   - type: web
-    name: dev-community
+    name: dev_community
     env: ruby
     buildCommand: "./render-build.sh"
     startCommand: "bundle exec rails s"
