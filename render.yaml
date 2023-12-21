@@ -1,15 +1,16 @@
 databases:
-  - name: postgres
+  - name: dev_community
     ipAllowList: []
     databaseName: dev_community
-    user: dev_community
+    user: robi
+    plan: free
 
 services:
   - type: web
-    name: dev_community
+    name: mysite
     env: ruby
-    buildCommand: "./render-build.sh"
-    startCommand: "bundle exec rails s"
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
     envVars:
       - key: DATABASE_URL
         fromDatabase:
