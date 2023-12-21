@@ -81,3 +81,4 @@ gem 'devise'
 gem 'kaminari'
 gem 'cssbundling-rails'
 gem "bootstrap-icons", "~> 1.0"
+gem 'omniauth-github'
