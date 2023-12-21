@@ -1,5 +1,5 @@
 databases:
-  - name: dev_community
+  - name: postgres
     ipAllowList: []
     databaseName: dev_community
     user: robi
