@@ -1,0 +1,8 @@
+{
+  "name": "dev-community",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/robimaliqi/dev-community.git",
+  "author": "Robi <robi.maliqi@hotmail.co.uk>",
+  "license": "MIT"
+}
