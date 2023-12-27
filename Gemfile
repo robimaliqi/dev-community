@@ -82,3 +82,4 @@ gem 'kaminari'
 gem 'cssbundling-rails'
 gem "bootstrap-icons", "~> 1.0"
 gem 'omniauth-github'
+gem "dockerfile-rails", ">= 1.6", :group => :development
