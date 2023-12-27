@@ -1,11 +1,10 @@
 class ConnectionsController < ApplicationController
-
   def index
     @requested_connections = Connection.includes(:requested).where(user_id: current_user.id)
     @received_connections = Connection.includes(:received).where(connected_user_id: current_user.id)
   end
 
-  def create 
+  def create
     @connection = current_user.connections.new(connection_params)
     @connector = User.find(connection_params[:connected_user_id])
     respond_to do |format|
@@ -24,7 +23,6 @@ class ConnectionsController < ApplicationController
             receiver = @connection.received
             receiver.connected_user_ids << @connection.requested.id
             receiver.save
-            
             requester = @connection.requested
             requester.connected_user_ids << @connection.received.id
             requester.save
@@ -32,8 +30,7 @@ class ConnectionsController < ApplicationController
         end
       end
 
-        format.turbo_stream { render turbo_stream: turbo_stream.replace("connection-status-#{@connection.id}", partial: "connections/update", locals: { connection: @connection }) }
-      end 
+      format.turbo_stream { render turbo_stream: turbo_stream.replace("connection-status-#{@connection.id}", partial: "connections/update", locals: { connection: @connection }) }
     end
   end
 
