@@ -29,7 +29,7 @@ RSpec.feature "UserSearches", type: :feature do
       end 
 
       it 'should allow users to search other users by partial country name' do
-        fill_in 'q_city_or_country_cont', with: 'Aus'
+        fill_in 'q_city_or_country_cont', with: 'aus'
         click_button 'Search'
         expect(page).to have_text(@user2.name)
         expect(page).to have_text(@user2.profile_title)
