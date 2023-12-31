@@ -9,7 +9,7 @@
           <h3 class="fw-bold"><%= user.name %></h3>
 
           <% if user == current_user %>
-            <%= link_to edit_member_personal_details_path, class: "edit-profile" data: { controller: "bs-modal-form" } do %>
+            <%= link_to edit_member_personal_details_path, class: "edit-profile", data: { controller: "bs-modal-form" } do %>
               <button type="button" class="btn btn-primary">Edit Details</button>
             <% end %>
           <% end %>
