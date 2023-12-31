@@ -81,8 +81,7 @@ $ cd dev-community
 $ bundle install
 
 # Database setup
-$ rails db:create
-$ rails db:migrate
+$ rails db:setup
 
 # Run the project
 $ ./bin/dev
