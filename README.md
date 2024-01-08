@@ -50,9 +50,16 @@ Describe your project
 
 ## :sparkles: Features
 
-:heavy_check_mark: Feature 1;\
-:heavy_check_mark: Feature 2;\
-:heavy_check_mark: Feature 3;
+:heavy_check_mark: User is able to Sign up and log in. this was done using devise.
+:heavy_check_mark: User is able to Update or delete personal information
+:heavy_check_mark: user is able to send request to other developers, see requests send from other developers, accept or decline the resuests.
+:heavy_check_mark: user is able view all followers.
+
+##### future features
+
+- sign up with github
+- sign up with google
+- upload profile photo
 
 ## :rocket: Technologies
 
