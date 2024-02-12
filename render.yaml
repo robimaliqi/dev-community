@@ -6,7 +6,7 @@ databases:
 
 services:
   - type: web
-    name: rails
+    name: dev-community
     env: ruby
     buildCommand: "./bin/render-build.sh"
     startCommand: bundle exec rails s
@@ -17,7 +17,3 @@ services:
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
-  - type: redis
-    name: redis
-    ipAllowList: []
-    plan: free
