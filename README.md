@@ -46,13 +46,13 @@
 
 ## :dart: About
 
-Describe your project
+An app similar to Linkedin, exclusively tailored for developers. Built with Rails 7, Turbo-Hotwire, Stimulus JS and Bootstrap5.
 
 ## :sparkles: Features
 
-:heavy_check_mark: User is able to Sign up and log in. this was done using devise.
-:heavy_check_mark: User is able to Update or delete personal information
-:heavy_check_mark: user is able to send request to other developers, see requests send from other developers, accept or decline the resuests.
+:heavy_check_mark: User is able to Sign up and log in. this was done using devise.<br>
+:heavy_check_mark: User is able to Update or delete personal information<br>
+:heavy_check_mark: user is able to send request to other developers, see requests send from other developers, accept or decline the resuests.<br>
 :heavy_check_mark: user is able view all followers.
 
 ##### future features
